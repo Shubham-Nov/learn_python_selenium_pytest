@@ -1,4 +1,4 @@
-#main.py
+#test_login.py
 from utils.browser_actions import BrowserActions
 from pages.login_page import LoginPage
 from config.settings import get_login_credentials
@@ -9,3 +9,8 @@ task.open_browser('chrome')
 task.search(input_txt)
 task = LoginPage(task, input_txt)
 task.login(get_login_credentials(input_txt, 'username'), get_login_credentials(input_txt, 'password'))
+
+act_title = task.get_title()
+exp_title = 'OrangeHRM'
+
+assert act_title == exp_title

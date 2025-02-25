@@ -25,3 +25,6 @@ class BrowserActions:
     def search(self, input_txt):
         self.driver.get(input_txt)
         time.sleep(8)
+
+    def get_title(self):
+        return self.driver.title
