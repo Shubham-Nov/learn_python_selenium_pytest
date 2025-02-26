@@ -6,8 +6,8 @@ from selenium.webdriver.common.by import By
 from utils.browser_actions import BrowserActions
 
 class LoginPage(BrowserActions):
-    def __init__(self, driver, url):
-        self.driver = driver.driver
+    def __init__(self, browser_actions, url):
+        self.driver = browser_actions.driver
         self.username_input = (By.XPATH, locators.get_locators(url, 'username'))
         self.password_input =  (By.XPATH, locators.get_locators(url, 'password'))
         self.login_btn = (By.XPATH, locators.get_locators(url, 'login_btn'))
